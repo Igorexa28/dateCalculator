@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#head {
+    border: 1px solid #000000;
+    background-color: antiquewhite;
+}
+
+#outerDiv {
+    height: 100px;
+    border: 1px solid red;
+    background-color: bisque;
+
+    #innerDiv {
+        background-color: burlywood;
+    }
+}
+
+#footer {
+    border: 1px solid pink;
+    background-color: rgb(219, 138, 138);
+}
