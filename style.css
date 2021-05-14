@@ -1,25 +1,244 @@
 * {
   margin: 0;
   padding: 0;
-  font-weight: 400;
+  color: #333;
   font-family: "Times New Roman", Times, serif;
 }
 
 #head {
-  border: 1px solid #000000;
-  background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border: 1px solid #d7a29d;
+  background-color: #f6e3e7;
+}
+#head > div {
+  margin: 0px 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+#head > div:first-child {
+  height: 40px;
+  font-size: 36px;
+}
+#head > div:nth-child(2n) {
+  font-size: 21px;
+}
+#head > div:last-child {
+  font-size: 21px;
 }
 
 #outerDiv {
-  height: 100px;
-  border: 1px solid red;
-  background-color: bisque;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(45deg, #d299c2, #fef9d7);
 }
 #outerDiv #innerDiv {
-  background-color: burlywood;
+  height: auto;
+  width: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#outerDiv #innerDiv h1 {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#outerDiv #innerDiv h2 {
+  text-align: left;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#outerDiv #innerDiv .main-photo {
+  width: auto;
+  height: 400px;
+  margin: 15px 0px;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#outerDiv #innerDiv .main-photo:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+#outerDiv #innerDiv hr {
+  opacity: 0;
+}
+#outerDiv #innerDiv .text {
+  font-size: 19px;
+  padding-left: 10px;
+}
+#outerDiv #innerDiv ul > li {
+  margin-top: 10px;
+  margin-left: 27px;
+  margin-bottom: 10px;
+}
+#outerDiv #innerDiv #firstCalc {
+  padding-top: 5px;
+  border-radius: 8px;
+  padding-bottom: 10px;
+  border: 2px solid black;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#outerDiv #innerDiv #firstCalc:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+#outerDiv #innerDiv #firstCalc h2 {
+  text-align: center;
+}
+#outerDiv #innerDiv #firstCalc > div {
+  width: 500px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+#outerDiv #innerDiv #firstCalc > div > form > center > label {
+  font-size: 21px;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+}
+#outerDiv #innerDiv #firstCalc > div > form > center > label:first-child {
+  margin-top: 10px;
+}
+#outerDiv #innerDiv #firstCalc > div > form > center > input {
+  width: 90%;
+  height: 32px;
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+#outerDiv #innerDiv #firstCalc > div > form > center > input:focus {
+  outline: none;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+#outerDiv #innerDiv #firstCalc > div button {
+  height: 30px;
+  width: 120px;
+}
+#outerDiv #innerDiv #secondCalc {
+  margin-top: 20px;
+  padding-top: 5px;
+  border-radius: 8px;
+  padding-bottom: 10px;
+  border: 2px solid black;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#outerDiv #innerDiv #secondCalc:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+#outerDiv #innerDiv #secondCalc h2 {
+  text-align: center;
+}
+#outerDiv #innerDiv #secondCalc > div {
+  width: 500px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+#outerDiv #innerDiv #secondCalc > div > form > center > label {
+  font-size: 21px;
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+}
+#outerDiv #innerDiv #secondCalc > div > form > center > label:first-child {
+  margin-top: 10px;
+}
+#outerDiv #innerDiv #secondCalc > div > form > center > input {
+  width: 90%;
+  height: 32px;
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+#outerDiv #innerDiv #secondCalc > div > form > center > input:focus {
+  outline: none;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+#outerDiv #innerDiv #secondCalc > div button {
+  height: 30px;
+  width: 120px;
 }
 
 #footer {
-  border: 1px solid pink;
-  background-color: #db8a8a;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 19px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #d7a29d;
+  background-color: #f5c4ce;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#footer > div {
+  margin-left: 10px;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

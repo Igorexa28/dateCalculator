@@ -1,26 +1,249 @@
 * {
     margin: 0;
     padding: 0;
-    font-weight: 400;
-    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    font-family:'Times New Roman', Times, serif;
 }
 
 #head {
-    border: 1px solid #000000;
-    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90px;
+    border: 1px solid #d7a29d;
+    background-color: #f6e3e7;
+
+
+    &>div {
+        margin: 0px 10px;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    &>div:first-child {
+        height: 40px;
+        font-size: 36px;
+    }
+
+    &>div:nth-child(2n) {
+        font-size: 21px;
+    }
+
+    &>div:last-child {
+        font-size: 21px;
+    }
 }
 
 #outerDiv {
-    height: 100px;
-    border: 1px solid red;
-    background-color: bisque;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(45deg, #d299c2, #fef9d7);
 
     #innerDiv {
-        background-color: burlywood;
+        height: auto;
+        width: 800px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        h1 {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            text-align: left;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .main-photo {
+            width: auto;
+            height: 400px;
+            margin: 15px 0px;
+            border-radius: 10px;
+            transition: all .3s linear;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            }
+        }
+
+        hr {
+            opacity: 0;
+        }
+
+        .text {
+            font-size: 19px;
+            padding-left: 10px;
+        }
+
+        ul {
+
+            &>li {
+                margin-top: 10px;
+                margin-left: 27px;
+                margin-bottom: 10px;
+            }
+        }
+
+        #firstCalc {
+            padding-top: 5px;
+            border-radius: 8px;
+            padding-bottom: 10px;
+            border: 2px solid black;
+            transition: all .4s linear;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            // background-color: cadetblue;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            &>div {
+                width: 500px;
+                padding-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 10px;
+                // background-color: chocolate;
+
+                &>form {
+
+                    &>center {
+
+                        &>label {
+                            font-size: 21px;
+                            text-align: left;
+                            font-family: 'Times New Roman', Times, serif;    
+                        }
+
+                        &>label:first-child {
+                            margin-top: 10px;
+                        }
+
+                        &>input {
+                            width: 90%;
+                            height: 32px;
+                            display: block;
+                            font-size: 18px;
+                            margin-top: 10px;
+                            border-radius: 8px;
+                            padding-left: 10px;
+                            margin-bottom: 10px;
+                            border: 1px solid black;
+                            transition: all .4s linear;
+
+                            &:focus {
+                                outline: none;
+                                transform: scale(1.01);
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    height: 30px;
+                    width: 120px;
+                }
+            }
+        }
+
+        #secondCalc {
+            margin-top: 20px;
+            padding-top: 5px;
+            border-radius: 8px;
+            padding-bottom: 10px;
+            border: 2px solid black;
+            transition: all .4s linear;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            &>div {
+                width: 500px;
+                padding-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 10px;
+
+                &>form {
+
+                    &>center {
+
+                        &>label {
+                            font-size: 21px;
+                            text-align: left;
+                            font-family: 'Times New Roman', Times, serif;    
+                        }
+
+                        &>label:first-child {
+                            margin-top: 10px;
+                        }
+
+                        &>input {
+                            width: 90%;
+                            height: 32px;
+                            display: block;
+                            font-size: 18px;
+                            margin-top: 10px;
+                            border-radius: 8px;
+                            padding-left: 10px;
+                            margin-bottom: 10px;
+                            border: 1px solid black;
+                            transition: all .4s linear;
+
+                            &:focus {
+                                outline: none;
+                                transform: scale(1.01);
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    height: 30px;
+                    width: 120px;
+                }
+            }
+        }
     }
 }
 
 #footer {
-    border: 1px solid pink;
-    background-color: rgb(219, 138, 138);
+    height: 70px;
+    display: flex;
+    font-size: 19px;
+    flex-flow: row wrap;
+    align-items: center;
+    border: 1px solid #d7a29d;
+    background-color: #f5c4ce;
+    justify-content: space-around;
+
+    &>div {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
