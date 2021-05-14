@@ -120,10 +120,6 @@
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-#outerDiv #innerDiv #firstCalc:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
 #outerDiv #innerDiv #firstCalc h2 {
   text-align: center;
 }
@@ -174,10 +170,6 @@
   transition: all 0.4s linear;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-#outerDiv #innerDiv #secondCalc:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
 }
 #outerDiv #innerDiv #secondCalc h2 {
   text-align: center;
