@@ -15,6 +15,12 @@ const pathsToImages = [
     'fifthCouple', 'sixthCouple', 'seventhCouple', 'eigthCouple', 'ninthCouple'
 ];
 
+const groupOfLetters = [
+    ['а', 'и', 'с', 'ъ'], ['б', 'й', 'т', 'ы'], ['в', 'к', 'у', 'ь'],
+    ['г', 'л', 'ф', 'э'], ['д', 'м', 'х', 'ю'], ['е', 'н', 'ц', 'я'],
+    ['ё', 'о', 'ч'], ['ж', 'п', 'ш'], ['з', 'р', 'щ']
+];
+
 document.querySelector('#calcBtn').addEventListener('click', function () {
     let regExp = /^([0-2^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
     const birthdays = document.getElementsByName('dateOfBirth');
@@ -39,6 +45,8 @@ document.querySelector('#calcBtn').addEventListener('click', function () {
             secondSum = recursiveSum(digitsOfSecondBirthday);
 
         let sum = firstSum + secondSum;
+
+        // TODO: Create right paths to images and after place on the page with description.
 
         console.log(`Sum: ${sum}.`);
         console.log(descriptionOfCouple[sum - 1]);
@@ -65,6 +73,33 @@ document.querySelector('#calcBtn2').addEventListener('click', function () {
     } else {
         console.log(name.value);
     }
+
+    let lowerCaseName = (name.value.toLowerCase()).split('');
+
+    console.log(lowerCaseName);
+
+    let sum = 0;
+
+    for (let index = 0; index < groupOfLetters.length; index++) {
+        let subArray = groupOfLetters[index];
+
+        for (let j = 0; j < lowerCaseName.length; j++) {
+            let char = lowerCaseName[j];
+
+            if (subArray.includes(char)) {
+                sum = sum + (index + 1);
+            }
+        }
+    }
+
+    let arrayString = sum.toString().split(''),
+        numberOfPair = recursiveSum(arrayString);
+
+    // TODO: Create right paths to images and after place on the page with description.
+
+    console.log("Your num: "  + numberOfPair);
+    console.log(descriptionOfCouple[numberOfPair - 1]);
+    console.log(pathsToImages[numberOfPair - 1]);
 });
 
 document.querySelector('#resetBtn2').addEventListener('click', function () {
