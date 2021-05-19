@@ -49,7 +49,7 @@ document.querySelector('#calcBtn').addEventListener('click', function () {
 
         let result = recursiveSum(stringSum);
 
-        document.querySelector('#information').style.display = 'block';
+        document.querySelector('.information').style.display = 'block';
 
         document.querySelector('#img1').src = 'images/' + pathsToImages[result - 1] + '.gif';
         document.querySelector('#desc1').innerHTML = descriptionOfCouple[result - 1];
@@ -66,7 +66,7 @@ document.querySelector('#resetBtn').addEventListener('click', function () {
 
     firstBirthday.value = '', secondBirthday.value = '';
 
-    document.querySelector('#information').style.display = 'none';
+    document.querySelector('.information').style.display = 'none';
 });
 
 document.querySelector('#calcBtn2').addEventListener('click', function () {
@@ -104,10 +104,17 @@ document.querySelector('#calcBtn2').addEventListener('click', function () {
     console.log("Your num: "  + numberOfPair);
     console.log(descriptionOfCouple[numberOfPair - 1]);
     console.log(pathsToImages[numberOfPair - 1]);
+
+    document.querySelector('#second').style.display = 'block';
+
+    document.querySelector('#img2').src = 'images/' + pathsToImages[numberOfPair - 1] + '.gif';
+    document.querySelector('#desc2').innerHTML = descriptionOfCouple[numberOfPair - 1];
 });
 
 document.querySelector('#resetBtn2').addEventListener('click', function () {
     document.getElementById('userName').value = '';
+
+    document.querySelector('#second').style.display = 'none';
 });
 
 // * This is an implementation of recursive function to find the sum of all digits 
