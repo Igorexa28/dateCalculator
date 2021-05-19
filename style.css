@@ -160,6 +160,31 @@
   height: 30px;
   width: 120px;
 }
+#outerDiv #innerDiv #firstCalc > div #information {
+  width: 100%;
+  height: auto;
+  display: none;
+  margin-top: 10px;
+}
+#outerDiv #innerDiv #firstCalc > div #information .imagePair {
+  margin: 10px 0px;
+  border-radius: 8px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#outerDiv #innerDiv #firstCalc > div #information .imagePair:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+#outerDiv #innerDiv #firstCalc > div #information .description {
+  padding: 10px;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+}
 #outerDiv #innerDiv #secondCalc {
   margin-top: 20px;
   padding-top: 5px;
