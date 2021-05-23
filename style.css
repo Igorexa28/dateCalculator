@@ -283,4 +283,74 @@
 #footer > div {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media all and (max-width: 665px) {
+  #head {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #head > div:first-child {
+    padding-top: 10px;
+  }
+  #head > div:nth-child(2n) {
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  #head > div:nth-child(2n):hover {
+    background-color: #f5d7dd;
+  }
+  #head > div:last-child {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  #head > div:last-child:hover {
+    background-color: #f5d7dd;
+  }
+
+  #footer {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer > div {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #footer > div:hover {
+    background-color: #f3b8c4;
+  }
 }/*# sourceMappingURL=style.css.map */
